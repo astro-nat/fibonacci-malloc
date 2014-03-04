@@ -1,12 +1,11 @@
 /* 
     File: my_allocator.h
 
-    Author: R.Bettati
+    Author: Derek Wene
             Department of Computer Science
             Texas A&M University
-    Date  : 08/02/08
+    Date  : 02/13/2014
 
-    Modified:
 
 */
 #include <stdlib.h>
@@ -78,18 +77,16 @@ int my_free(Addr _a);
    
  
 //I need these helper functions. Please include in H file 
-int nearest_fib(int size);
-int index_fib(int fib);
-int index_number_blocks(int index);
-void divide_memory (int index);
-void add_to_freelist(HDR* p1);
-void remove_from_list(HDR* node);
-HDR* find_buddy(HDR* header);
-int printfreelist();
-int printmemoryinorder();
-int nearest_fib_upper(int size);
-void check_size(int size);
-int checkfreelist(HDR* pointer);
+int nearest_fib(int size); // Returns the nearest fibonacci number to the argument size
+int index_fib(int fib); //Returns the index in the freelist to a perticular fibonacci number
+int index_number_blocks(int index); // Returns the fibonacci number for a index in the freelist
+void divide_memory (int index); // Does the actual memory division
+void add_to_freelist(HDR* p1); // adds a memory chunk to the freelist
+void remove_from_list(HDR* node); // after merging two chunks of memory, the right chunk is removed from the freelist
+int printfreelist(); // uses printf to print the freelist in a visual format
+int printmemoryinorder(); // prints the memory headers in order
+int nearest_fib_upper(int size); // returns the nearest fibonacci, rounded up
+int checkfreelist(HDR* pointer); // used for testing purposes
 
 
 #endif
