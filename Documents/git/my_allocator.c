@@ -1,12 +1,11 @@
 /* 
     File: my_allocator.c
 
-    Author: <your name>
+    Author: <Derek Wene>
             Department of Computer Science
             Texas A&M University
-    Date  : <date>
+    Date  : <2/12/2014>
 
-    Modified: 
 
     This file contains the implementation of the module "MY_ALLOCATOR".
 
